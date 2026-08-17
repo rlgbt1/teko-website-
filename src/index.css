@@ -1,0 +1,90 @@
+@import url('https://api.fontshare.com/v2/css?f[]=general-sans@500,600,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  --color-red-primary: #7a1420;
+  --color-red-deep: #5c0f18;
+  --color-red-soft: #f2e1de;
+  --color-charcoal: #262b33;
+  --color-charcoal-mix: #362a2c;
+  --color-gray-mid: #96888a;
+  --color-gray-line: #e6dedc;
+  --color-cream: #f6efec;
+  --color-canvas: #faf6f4;
+
+  --font-display: 'General Sans', 'Inter', sans-serif;
+  --font-body: 'Inter', 'IBM Plex Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+  --animate-blink: blink 1s step-end infinite;
+  --animate-marquee: marquee 32s linear infinite;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-charcoal);
+  background: var(--color-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+::selection {
+  background: var(--color-red-primary);
+  color: #fff;
+}
