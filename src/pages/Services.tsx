@@ -7,6 +7,7 @@ import { IconBadge } from '../components/IconBadge'
 import { CheckList } from '../components/CheckList'
 import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation'
 import { DashboardMockup } from '../components/DashboardMockup'
+import { assetUrl } from '../lib/assetUrl'
 
 export function Services() {
   const { t } = useLanguage()
@@ -21,7 +22,7 @@ export function Services() {
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.4]"
           style={{
-            backgroundImage: 'url(/assets/textures/circuit-tile.png)',
+            backgroundImage: `url(${assetUrl('assets/textures/circuit-tile.png')})`,
             backgroundSize: '340px',
             maskImage: 'linear-gradient(to bottom, black, transparent 85%)',
             WebkitMaskImage: 'linear-gradient(to bottom, black, transparent 85%)',

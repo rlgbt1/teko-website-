@@ -3,6 +3,7 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { Container } from '../components/Container'
 import { FounderCard } from '../components/FounderCard'
 import { Mission } from '../sections/Mission'
+import { assetUrl } from '../lib/assetUrl'
 
 export function AboutPage() {
   const { t } = useLanguage()
@@ -17,7 +18,7 @@ export function AboutPage() {
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.4]"
           style={{
-            backgroundImage: 'url(/assets/textures/circuit-tile.png)',
+            backgroundImage: `url(${assetUrl('assets/textures/circuit-tile.png')})`,
             backgroundSize: '340px',
             maskImage: 'linear-gradient(to bottom, black, transparent 85%)',
             WebkitMaskImage: 'linear-gradient(to bottom, black, transparent 85%)',
@@ -38,7 +39,7 @@ export function AboutPage() {
 
           <div className="relative mx-auto mt-10 h-24 w-full max-w-xs overflow-hidden rounded-2xl bg-white/70 ring-1 ring-red-primary/10 sm:h-28 sm:max-w-sm">
             <img
-              src="/assets/icons/silhouettes-network.png"
+              src={assetUrl('assets/icons/silhouettes-network.png')}
               alt=""
               className="absolute top-1/2 left-1/2 h-[340px] w-[340px] -translate-x-1/2 -translate-y-1/2 sm:h-[400px] sm:w-[400px]"
             />

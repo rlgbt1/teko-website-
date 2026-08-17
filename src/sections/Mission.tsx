@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container } from '../components/Container'
+import { assetUrl } from '../lib/assetUrl'
 
 export function Mission() {
   const { t } = useLanguage()
@@ -10,7 +11,7 @@ export function Mission() {
       <div
         className="pointer-events-none absolute inset-y-0 right-0 w-full opacity-[0.16] sm:w-2/3"
         style={{
-          backgroundImage: 'url(/assets/textures/network-graphic-dense.png)',
+          backgroundImage: `url(${assetUrl('assets/textures/network-graphic-dense.png')})`,
           backgroundSize: '900px',
           backgroundPosition: 'right center',
           backgroundRepeat: 'no-repeat',

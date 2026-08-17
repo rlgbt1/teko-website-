@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { assetUrl } from '../lib/assetUrl'
 
 export function FounderCard({
   name,
@@ -28,7 +29,7 @@ export function FounderCard({
       <div className="relative h-28 w-28 overflow-hidden rounded-full border-[3px] border-red-primary bg-red-soft shadow-[0_10px_25px_-8px_rgba(122,20,32,0.35)] sm:h-32 sm:w-32">
         {photoSrc ? (
           <img
-            src={photoSrc}
+            src={assetUrl(photoSrc)}
             alt={name}
             className="h-full w-full object-cover"
             style={{ filter: 'saturate(0.85) brightness(1.08) contrast(1.02)' }}

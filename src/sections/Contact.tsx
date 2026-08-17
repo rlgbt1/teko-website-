@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container } from '../components/Container'
 import { IconBadge } from '../components/IconBadge'
+import { assetUrl } from '../lib/assetUrl'
 
 export function Contact() {
   const { t } = useLanguage()
@@ -20,7 +21,7 @@ export function Contact() {
           <div
             className="pointer-events-none absolute inset-0 opacity-[0.08]"
             style={{
-              backgroundImage: 'url(/assets/textures/network-graphic-dense.png)',
+              backgroundImage: `url(${assetUrl('assets/textures/network-graphic-dense.png')})`,
               backgroundSize: '640px',
               backgroundPosition: 'center',
               filter: 'invert(1)',

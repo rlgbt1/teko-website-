@@ -4,6 +4,7 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { caseStudyContent } from '../i18n/caseStudyContent'
 import { Container } from '../components/Container'
 import { DashboardMockup } from '../components/DashboardMockup'
+import { assetUrl } from '../lib/assetUrl'
 
 export function CaseStudy() {
   const { slug } = useParams()
@@ -26,7 +27,7 @@ export function CaseStudy() {
         <div
           className="relative mt-6 h-52 w-full overflow-hidden rounded-3xl bg-charcoal sm:h-64"
           style={{
-            backgroundImage: 'url(/assets/icons/tangled-to-structured.png)',
+            backgroundImage: `url(${assetUrl('assets/icons/tangled-to-structured.png')})`,
             backgroundSize: '260%',
             backgroundPosition: 'center',
           }}

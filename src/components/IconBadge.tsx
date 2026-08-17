@@ -1,3 +1,5 @@
+import { assetUrl } from '../lib/assetUrl'
+
 export function IconBadge({
   src,
   size = 'md',
@@ -15,7 +17,7 @@ export function IconBadge({
 
   return (
     <div className={`flex shrink-0 items-center justify-center overflow-hidden rounded-2xl ${sizeClass} ${toneClass}`}>
-      <img src={src} alt="" className="h-full w-full scale-[1.35] object-contain" />
+      <img src={assetUrl(src)} alt="" className="h-full w-full scale-[1.35] object-contain" />
     </div>
   )
 }

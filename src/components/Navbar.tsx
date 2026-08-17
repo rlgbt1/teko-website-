@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
+import { assetUrl } from '../lib/assetUrl'
 import { LangToggle } from './LangToggle'
 
 const links = [
@@ -38,7 +39,7 @@ export function Navbar() {
       >
         <Link to="/" className="flex shrink-0 items-center gap-2 pl-1">
           <img
-            src="/assets/logo/teko-monogram.png"
+            src={assetUrl('assets/logo/teko-monogram.png')}
             alt="Teko"
             className={`transition-all duration-300 ${scrolled ? 'h-6 w-6' : 'h-7 w-7'}`}
           />

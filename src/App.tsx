@@ -13,7 +13,7 @@ import { CaseStudy } from './pages/CaseStudy'
 function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Navbar />
         <main>
           <Routes>

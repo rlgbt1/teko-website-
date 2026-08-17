@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container } from '../components/Container'
 import { CaseStudies } from '../sections/CaseStudies'
+import { assetUrl } from '../lib/assetUrl'
 
 export function CaseStudiesIndex() {
   const { t } = useLanguage()
@@ -16,7 +17,7 @@ export function CaseStudiesIndex() {
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.4]"
           style={{
-            backgroundImage: 'url(/assets/textures/circuit-tile.png)',
+            backgroundImage: `url(${assetUrl('assets/textures/circuit-tile.png')})`,
             backgroundSize: '340px',
             maskImage: 'linear-gradient(to bottom, black, transparent 85%)',
             WebkitMaskImage: 'linear-gradient(to bottom, black, transparent 85%)',

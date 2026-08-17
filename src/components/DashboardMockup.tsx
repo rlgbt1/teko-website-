@@ -1,9 +1,11 @@
+import { assetUrl } from '../lib/assetUrl'
+
 /**
  * Placeholder "BDA × TekoAI" dashboard mockup — built in CSS/SVG so the
  * scroll-reveal section has real proportions and brand-correct visual
  * weight until the actual product screenshot is dropped in.
  * Swap out by replacing this component's usage in TekoRoute.tsx with an
- * <img src="/assets/case-studies/bda-dashboard.png" /> once available.
+ * <img src={assetUrl('assets/case-studies/bda-dashboard.png')} /> once available.
  */
 export function DashboardMockup() {
   const bars = [38, 62, 45, 80, 55, 70, 90, 48]
@@ -12,7 +14,7 @@ export function DashboardMockup() {
     <div className="aspect-[16/10] w-full bg-white p-4 sm:p-6">
       <div className="flex items-center justify-between border-b border-gray-line pb-3">
         <div className="flex items-center gap-2">
-          <img src="/assets/logo/teko-monogram.png" alt="" className="h-5 w-5" />
+          <img src={assetUrl('assets/logo/teko-monogram.png')} alt="" className="h-5 w-5" />
           <span className="font-display text-xs font-bold text-charcoal sm:text-sm">
             BDA <span className="text-red-primary">×</span> TekoAI — Market Intelligence
           </span>

@@ -4,6 +4,7 @@ import { useLanguage } from '../i18n/LanguageContext'
 import { CONTACT_EMAIL } from '../i18n/translations'
 import { Container } from '../components/Container'
 import { IconBadge } from '../components/IconBadge'
+import { assetUrl } from '../lib/assetUrl'
 
 export function ContactPage() {
   const { t } = useLanguage()
@@ -17,7 +18,7 @@ export function ContactPage() {
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.4]"
         style={{
-          backgroundImage: 'url(/assets/textures/circuit-tile.png)',
+          backgroundImage: `url(${assetUrl('assets/textures/circuit-tile.png')})`,
           backgroundSize: '340px',
           maskImage: 'radial-gradient(ellipse at top, black, transparent 70%)',
           WebkitMaskImage: 'radial-gradient(ellipse at top, black, transparent 70%)',

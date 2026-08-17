@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import { CONTACT_EMAIL, SERVICE_SLUGS } from '../i18n/translations'
+import { assetUrl } from '../lib/assetUrl'
 import { Container } from './Container'
 import { LangToggle } from './LangToggle'
 
@@ -21,7 +22,7 @@ export function Footer() {
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.05]"
         style={{
-          backgroundImage: 'url(/assets/textures/network-graphic-dense.png)',
+          backgroundImage: `url(${assetUrl('assets/textures/network-graphic-dense.png')})`,
           backgroundSize: '700px',
           backgroundPosition: 'left bottom',
           backgroundRepeat: 'no-repeat',
@@ -31,7 +32,7 @@ export function Footer() {
         <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
           <div>
             <Link to="/" className="flex items-center gap-2">
-              <img src="/assets/logo/teko-monogram.png" alt="Teko" className="h-7 w-7" />
+              <img src={assetUrl('assets/logo/teko-monogram.png')} alt="Teko" className="h-7 w-7" />
               <span className="font-display text-base font-bold text-charcoal">TEKO</span>
             </Link>
             <p className="mt-3 max-w-xs text-[13px] leading-relaxed text-charcoal/55">

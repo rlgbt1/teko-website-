@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container } from '../components/Container'
+import { assetUrl } from '../lib/assetUrl'
 
 export function HowWeWork() {
   const { t } = useLanguage()
@@ -15,7 +16,7 @@ export function HowWeWork() {
           <p className="mt-3 text-sm text-white/55 sm:text-base">{t.how.subtitle}</p>
           <div className="relative mx-auto mt-8 h-20 w-full max-w-sm overflow-hidden rounded-2xl bg-white/[0.06] ring-1 ring-white/10 sm:h-24 sm:max-w-md">
             <img
-              src="/assets/icons/how-we-work-sequence.png"
+              src={assetUrl('assets/icons/how-we-work-sequence.png')}
               alt="Discovery, build, launch, support"
               className="absolute top-1/2 left-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 brightness-[1.6] contrast-[1.15] sm:h-[360px] sm:w-[360px]"
             />

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container } from '../components/Container'
 import { Terminal } from '../components/Terminal'
+import { assetUrl } from '../lib/assetUrl'
 
 export function Hero() {
   const { t } = useLanguage()
@@ -12,7 +13,7 @@ export function Hero() {
       <div
         className="pointer-events-none absolute inset-0 opacity-[0.32]"
         style={{
-          backgroundImage: 'url(/assets/textures/circuit-tile.png)',
+          backgroundImage: `url(${assetUrl('assets/textures/circuit-tile.png')})`,
           backgroundSize: '340px',
           maskImage: 'linear-gradient(to bottom, black, transparent 85%)',
           WebkitMaskImage: 'linear-gradient(to bottom, black, transparent 85%)',
@@ -21,7 +22,7 @@ export function Hero() {
       <div
         className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 opacity-[0.14] lg:block"
         style={{
-          backgroundImage: 'url(/assets/textures/network-graphic-dense.png)',
+          backgroundImage: `url(${assetUrl('assets/textures/network-graphic-dense.png')})`,
           backgroundSize: '760px',
           backgroundPosition: 'right center',
           backgroundRepeat: 'no-repeat',

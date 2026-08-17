@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container } from '../components/Container'
+import { assetUrl } from '../lib/assetUrl'
 
 export function CaseStudies({ compact = false, showViewAll = false }: { compact?: boolean; showViewAll?: boolean }) {
   const { t } = useLanguage()
@@ -36,7 +37,7 @@ export function CaseStudies({ compact = false, showViewAll = false }: { compact?
                 <div
                   className="relative h-36 w-full bg-charcoal"
                   style={{
-                    backgroundImage: 'url(/assets/icons/tangled-to-structured.png)',
+                    backgroundImage: `url(${assetUrl('assets/icons/tangled-to-structured.png')})`,
                     backgroundSize: '220%',
                     backgroundPosition: 'center',
                   }}
