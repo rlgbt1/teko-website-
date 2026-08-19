@@ -18,8 +18,22 @@ export function CaseStudy() {
   if (!study) return <Navigate to="/" replace />
 
   return (
-    <article className="pt-28 pb-24 sm:pt-32">
-      <Container>
+    <article className="relative overflow-hidden pt-28 pb-24 sm:pt-32">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.3]"
+        style={{
+          backgroundImage: `url(${assetUrl('assets/textures/circuit-tile.png')})`,
+          backgroundSize: '340px',
+          maskImage: 'linear-gradient(to bottom, black, transparent 60%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, black, transparent 60%)',
+        }}
+      />
+      <img
+        src={assetUrl('assets/icons/data-stack.png')}
+        alt=""
+        className="pointer-events-none absolute -right-8 bottom-8 hidden h-64 opacity-[0.06] lg:block"
+      />
+      <Container className="relative">
         <Link to="/case-studies" className="text-xs font-semibold text-charcoal/50 hover:text-red-primary">
           ← {t.backHome}
         </Link>
@@ -28,8 +42,9 @@ export function CaseStudy() {
           className="relative mt-6 h-52 w-full overflow-hidden rounded-3xl bg-charcoal sm:h-64"
           style={{
             backgroundImage: `url(${assetUrl('assets/icons/tangled-to-structured.png')})`,
-            backgroundSize: '260%',
+            backgroundSize: '80%',
             backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
           }}
         >
           <div className="absolute inset-0 flex items-end bg-gradient-to-t from-charcoal/85 via-charcoal/30 to-transparent p-6 sm:p-10">

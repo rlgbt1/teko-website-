@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container } from '../components/Container'
 import { IconBadge } from '../components/IconBadge'
+import { assetUrl } from '../lib/assetUrl'
 
 function StatGroup({
   label,
@@ -38,10 +39,10 @@ function StatGroup({
             transition={{ duration: 0.5, delay: delayBase + i * 0.08 }}
             className={`rounded-2xl border border-gray-line ${borderTone} border-t-4 bg-gradient-to-b ${bgTone} p-4 shadow-[0_8px_20px_-12px_rgba(38,43,51,0.25)] transition-shadow hover:shadow-[0_14px_30px_-14px_rgba(38,43,51,0.35)] sm:p-5`}
           >
-            <div className={`font-display text-3xl font-bold sm:text-4xl ${numberTone}`}>
+            <div className={`font-display text-4xl leading-none font-bold sm:text-5xl ${numberTone}`}>
               {item.stat}
             </div>
-            <p className="mt-2 text-[13px] leading-snug text-charcoal/65">{item.desc}</p>
+            <p className="mt-1.5 text-[11px] leading-snug text-charcoal/55 sm:text-xs">{item.desc}</p>
           </motion.div>
         ))}
       </div>
@@ -53,8 +54,17 @@ export function Stats() {
   const { t } = useLanguage()
 
   return (
-    <section className="py-20 sm:py-28">
-      <Container>
+    <section className="relative overflow-hidden py-20 sm:py-28">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.35]"
+        style={{
+          backgroundImage: `url(${assetUrl('assets/textures/circuit-tile.png')})`,
+          backgroundSize: '340px',
+          maskImage: 'radial-gradient(ellipse at top, black, transparent 75%)',
+          WebkitMaskImage: 'radial-gradient(ellipse at top, black, transparent 75%)',
+        }}
+      />
+      <Container className="relative">
         <div className="mx-auto max-w-2xl text-center">
           <h2 className="font-display text-2xl font-bold text-charcoal sm:text-3xl">
             {t.stats.title}

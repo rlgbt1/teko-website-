@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container } from '../components/Container'
 import { assetUrl } from '../lib/assetUrl'
@@ -38,8 +39,9 @@ export function CaseStudies({ compact = false, showViewAll = false }: { compact?
                   className="relative h-36 w-full bg-charcoal"
                   style={{
                     backgroundImage: `url(${assetUrl('assets/icons/tangled-to-structured.png')})`,
-                    backgroundSize: '220%',
+                    backgroundSize: '70%',
                     backgroundPosition: 'center',
+                    backgroundRepeat: 'no-repeat',
                   }}
                 >
                   <div className="absolute inset-0 bg-charcoal/45 transition-colors group-hover:bg-charcoal/30" />
@@ -56,7 +58,7 @@ export function CaseStudies({ compact = false, showViewAll = false }: { compact?
                   </p>
                   <span className="mt-4 inline-flex items-center gap-1 text-[13px] font-semibold text-charcoal">
                     {t.cases.viewCase}
-                    <span className="transition-transform group-hover:translate-x-1">→</span>
+                    <ArrowRight className="h-3.5 w-3.5 transition-transform group-hover:translate-x-1" />
                   </span>
                 </div>
               </Link>
@@ -70,7 +72,7 @@ export function CaseStudies({ compact = false, showViewAll = false }: { compact?
               to="/case-studies"
               className="inline-flex items-center gap-2 rounded-full border border-gray-line px-6 py-3 text-sm font-semibold text-charcoal transition-colors hover:border-red-primary hover:text-red-primary"
             >
-              {t.cases.viewAll} <span>→</span>
+              {t.cases.viewAll} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         )}

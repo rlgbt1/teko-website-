@@ -3,12 +3,16 @@ import { assetUrl } from '../lib/assetUrl'
 
 export function FounderCard({
   name,
-  bio,
+  degree,
+  experience,
+  mantra,
   photoSrc,
   delay,
 }: {
   name: string
-  bio: string
+  degree: string
+  experience: readonly string[]
+  mantra: string
   photoSrc?: string
   delay: number
 }) {
@@ -41,7 +45,15 @@ export function FounderCard({
         )}
       </div>
       <h3 className="mt-5 font-display text-base font-bold text-charcoal">{name}</h3>
-      <p className="mt-2 max-w-xs text-[13px] leading-relaxed text-charcoal/60">{bio}</p>
+      <p className="mt-2.5 max-w-xs text-[13px] font-semibold leading-snug text-charcoal">{degree}</p>
+      <div className="mt-2 max-w-xs space-y-1">
+        {experience.map((line) => (
+          <p key={line} className="text-[13px] leading-snug text-charcoal/60">
+            {line}
+          </p>
+        ))}
+      </div>
+      <p className="mt-3 max-w-xs text-[13px] leading-snug font-semibold text-red-primary italic">{mantra}</p>
     </motion.div>
   )
 }

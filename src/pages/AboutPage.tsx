@@ -24,6 +24,11 @@ export function AboutPage() {
             WebkitMaskImage: 'linear-gradient(to bottom, black, transparent 85%)',
           }}
         />
+        <img
+          src={assetUrl('assets/icons/circuit-tree.png')}
+          alt=""
+          className="pointer-events-none absolute -top-6 -right-10 hidden h-80 opacity-[0.1] lg:block"
+        />
         <Container className="relative">
           <div className="mx-auto max-w-2xl text-center">
             <span className="font-display text-xs font-bold uppercase tracking-[0.14em] text-red-primary">
@@ -37,20 +42,32 @@ export function AboutPage() {
             </p>
           </div>
 
-          <div className="relative mx-auto mt-10 h-24 w-full max-w-xs overflow-hidden rounded-2xl bg-white/70 ring-1 ring-red-primary/10 sm:h-28 sm:max-w-sm">
-            <img
-              src={assetUrl('assets/icons/silhouettes-network.png')}
-              alt=""
-              className="absolute top-1/2 left-1/2 h-[340px] w-[340px] -translate-x-1/2 -translate-y-1/2 sm:h-[400px] sm:w-[400px]"
-            />
-          </div>
+          <img
+            src={assetUrl('assets/icons/silhouettes-network.png')}
+            alt=""
+            className="relative mx-auto mt-10 h-28 sm:h-36"
+          />
         </Container>
       </section>
 
       <Mission />
 
-      <section className="bg-cream py-20 sm:py-28">
-        <Container>
+      <section className="relative overflow-hidden bg-cream py-20 sm:py-28">
+        <div
+          className="pointer-events-none absolute inset-0 opacity-[0.35]"
+          style={{
+            backgroundImage: `url(${assetUrl('assets/textures/circuit-tile.png')})`,
+            backgroundSize: '340px',
+            maskImage: 'radial-gradient(ellipse at center, black, transparent 75%)',
+            WebkitMaskImage: 'radial-gradient(ellipse at center, black, transparent 75%)',
+          }}
+        />
+        <img
+          src={assetUrl('assets/icons/building-growth.png')}
+          alt=""
+          className="pointer-events-none absolute bottom-0 left-4 hidden h-64 opacity-[0.08] lg:block"
+        />
+        <Container className="relative">
           <h2 className="text-center font-display text-2xl font-bold text-charcoal sm:text-3xl">
             {t.about.foundersTitle}
           </h2>
@@ -60,13 +77,17 @@ export function AboutPage() {
           <div className="mx-auto mt-10 grid max-w-2xl gap-6 sm:grid-cols-2">
             <FounderCard
               name={t.about.founder1.name}
-              bio={t.about.founder1.bio}
+              degree={t.about.founder1.degree}
+              experience={t.about.founder1.experience}
+              mantra={t.about.founder1.mantra}
               photoSrc="/assets/founders/reinaldo.jpg"
               delay={0}
             />
             <FounderCard
               name={t.about.founder2.name}
-              bio={t.about.founder2.bio}
+              degree={t.about.founder2.degree}
+              experience={t.about.founder2.experience}
+              mantra={t.about.founder2.mantra}
               photoSrc="/assets/founders/malcolm.jpg"
               delay={0.12}
             />

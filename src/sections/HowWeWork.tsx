@@ -1,7 +1,20 @@
 import { motion } from 'framer-motion'
+import { ArrowRight } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container } from '../components/Container'
 import { assetUrl } from '../lib/assetUrl'
+
+function TrafficDots({ muted = false }: { muted?: boolean }) {
+  const size = muted ? 'h-2 w-2' : 'h-3 w-3'
+  const opacity = muted ? 'opacity-70' : ''
+  return (
+    <div className="flex items-center gap-1.5">
+      <span className={`${size} ${opacity} rounded-full bg-[#ff5f57]`} />
+      <span className={`${size} ${opacity} rounded-full bg-[#febc2e]`} />
+      <span className={`${size} ${opacity} rounded-full bg-[#28c840]`} />
+    </div>
+  )
+}
 
 export function HowWeWork() {
   const { t } = useLanguage()
@@ -14,17 +27,34 @@ export function HowWeWork() {
             {t.how.title}
           </h2>
           <p className="mt-3 text-sm text-white/55 sm:text-base">{t.how.subtitle}</p>
-          <div className="relative mx-auto mt-8 h-20 w-full max-w-sm overflow-hidden rounded-2xl bg-white/[0.06] ring-1 ring-white/10 sm:h-24 sm:max-w-md">
-            <img
-              src={assetUrl('assets/icons/how-we-work-sequence.png')}
-              alt="Discovery, build, launch, support"
-              className="absolute top-1/2 left-1/2 h-[300px] w-[300px] -translate-x-1/2 -translate-y-1/2 brightness-[1.6] contrast-[1.15] sm:h-[360px] sm:w-[360px]"
-            />
+
+          <div className="mx-auto mt-8 w-full max-w-sm overflow-hidden rounded-2xl border border-white/10 bg-white/[0.05] sm:max-w-md">
+            <div className="flex items-center gap-3 border-b border-white/10 px-4 py-2.5">
+              <TrafficDots />
+              <span className="font-mono text-xs text-white/40">teko — processo</span>
+            </div>
+            <div className="flex items-center justify-center px-6 py-5">
+              <img
+                src={assetUrl('assets/icons/how-we-work-sequence.png')}
+                alt="Discovery, build, launch, support"
+                className="h-10 w-auto brightness-[2] contrast-[1.2] saturate-[1.4] sm:h-12"
+              />
+            </div>
           </div>
         </div>
 
         <div className="relative mt-10 grid gap-6 sm:mt-12 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="absolute top-[22px] right-0 left-0 hidden h-px bg-white/10 lg:block" />
+          {/* Desktop-only arrow connectors between the 4 step "windows" */}
+          <div className="pointer-events-none absolute inset-y-0 hidden w-full lg:block">
+            {[25, 50, 75].map((leftPct) => (
+              <ArrowRight
+                key={leftPct}
+                className="absolute top-1/2 h-5 w-5 -translate-x-1/2 -translate-y-1/2 text-red-primary/50"
+                style={{ left: `${leftPct}%` }}
+              />
+            ))}
+          </div>
+
           {t.how.steps.map((step, i) => (
             <motion.div
               key={step.name}
@@ -32,20 +62,27 @@ export function HowWeWork() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-40px' }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="relative rounded-2xl border border-white/10 bg-white/[0.03] p-6"
+              className="relative overflow-hidden rounded-2xl border border-white/15 bg-white/[0.04] transition-colors hover:border-red-primary/40"
             >
-              <div className="relative z-10 flex h-11 w-11 items-center justify-center rounded-full border border-red-primary/40 bg-charcoal font-display text-sm font-bold text-red-primary">
-                {i + 1}
-              </div>
-              <div className="mt-4 flex items-center gap-2">
-                <h3 className="font-display text-base font-bold text-white">{step.name}</h3>
+              <div className="flex items-center gap-2.5 border-b border-white/10 px-4 py-2.5">
+                <TrafficDots muted />
+                <span className="font-display text-[13px] font-bold text-white">{step.name}</span>
                 {step.tag && (
-                  <span className="rounded-full bg-red-primary/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-red-primary">
+                  <span className="rounded-full bg-red-primary px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-white">
                     {step.tag}
                   </span>
                 )}
               </div>
-              <p className="mt-2 text-[13px] leading-relaxed text-white/55">{step.desc}</p>
+              <div className="p-5">
+                <div className="flex h-9 w-9 items-center justify-center rounded-full bg-red-primary font-display text-sm font-bold text-white">
+                  {i + 1}
+                </div>
+                <p className="mt-3 text-[13px] leading-relaxed text-white/60">{step.desc}</p>
+              </div>
+              {/* Mobile/tablet: down-arrow connector between stacked cards */}
+              {i < t.how.steps.length - 1 && (
+                <ArrowRight className="absolute -bottom-5 left-1/2 h-4 w-4 -translate-x-1/2 rotate-90 text-red-primary/50 sm:hidden" />
+              )}
             </motion.div>
           ))}
         </div>

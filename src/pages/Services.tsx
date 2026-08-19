@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { ArrowRight, Calendar } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container } from '../components/Container'
 import { IconBadge } from '../components/IconBadge'
@@ -42,9 +43,7 @@ export function Services() {
             <span className="rounded-full bg-red-primary/10 px-3.5 py-1.5 text-sm font-semibold text-red-primary">
               {t.route.intro2a}
             </span>
-            <span className="text-charcoal/30" aria-hidden>
-              →
-            </span>
+            <ArrowRight className="h-4 w-4 text-charcoal/30" aria-hidden />
             <span className="rounded-full bg-charcoal/5 px-3.5 py-1.5 text-sm font-semibold text-charcoal">
               {t.route.intro2b}
             </span>
@@ -56,7 +55,12 @@ export function Services() {
       </section>
 
       {/* Suite 1 */}
-      <section className="py-14 sm:py-20">
+      <section className="relative overflow-hidden py-14 sm:py-20">
+        <img
+          src={assetUrl('assets/icons/building-growth.png')}
+          alt=""
+          className="pointer-events-none absolute top-10 -right-8 hidden h-60 opacity-[0.06] lg:block"
+        />
         <Container>
           <SuiteBlock
             n={1}
@@ -83,7 +87,12 @@ export function Services() {
       </div>
 
       {/* Suite 2 */}
-      <section className="py-14 sm:py-20">
+      <section className="relative overflow-hidden py-14 sm:py-20">
+        <img
+          src={assetUrl('assets/icons/data-stack.png')}
+          alt=""
+          className="pointer-events-none absolute top-10 -left-8 hidden h-60 opacity-[0.06] lg:block"
+        />
         <Container>
           <SuiteBlock
             n={2}
@@ -141,7 +150,7 @@ export function Services() {
               to="/contact"
               className="mt-6 inline-flex items-center gap-2 rounded-full bg-red-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-red-deep"
             >
-              {t.route.bottomCtaButton}
+              <Calendar className="h-4 w-4" /> {t.route.bottomCtaButton}
             </Link>
           </div>
         </Container>
@@ -218,7 +227,7 @@ function SuiteBlock({
                   to={`/services/${l.slug}`}
                   className="inline-flex items-center gap-1.5 rounded-full border border-gray-line px-3.5 py-2 text-xs font-semibold text-charcoal transition-colors hover:border-red-primary hover:text-red-primary"
                 >
-                  {l.label} <span>→</span>
+                  {l.label} <ArrowRight className="h-3.5 w-3.5" />
                 </Link>
               ))}
             </div>

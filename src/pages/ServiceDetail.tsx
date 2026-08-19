@@ -5,12 +5,20 @@ import { CONTACT_EMAIL, SERVICE_SLUGS } from '../i18n/translations'
 import { Container } from '../components/Container'
 import { CheckList } from '../components/CheckList'
 import { IconBadge } from '../components/IconBadge'
+import { assetUrl } from '../lib/assetUrl'
 
 const iconBySlug: Record<string, string> = {
   'digital-operations-pack': '/assets/icons/digital-identity.png',
   'business-tools': '/assets/icons/digital-identity.png',
   'executive-reporting-agent': '/assets/icons/analytics-reporting.png',
   'ai-workflows-crm': '/assets/icons/analytics-reporting.png',
+}
+
+const watermarkBySlug: Record<string, string> = {
+  'digital-operations-pack': 'assets/icons/building-growth.png',
+  'business-tools': 'assets/icons/building-growth.png',
+  'executive-reporting-agent': 'assets/icons/data-stack.png',
+  'ai-workflows-crm': 'assets/icons/data-stack.png',
 }
 
 export function ServiceDetail() {
@@ -28,8 +36,22 @@ export function ServiceDetail() {
   const item = t.serviceDetail.items[slug as keyof typeof t.serviceDetail.items]
 
   return (
-    <article className="pt-32 pb-24 sm:pt-40">
-      <Container>
+    <article className="relative overflow-hidden pt-32 pb-24 sm:pt-40">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.35]"
+        style={{
+          backgroundImage: `url(${assetUrl('assets/textures/circuit-tile.png')})`,
+          backgroundSize: '340px',
+          maskImage: 'linear-gradient(to bottom, black, transparent 70%)',
+          WebkitMaskImage: 'linear-gradient(to bottom, black, transparent 70%)',
+        }}
+      />
+      <img
+        src={assetUrl(watermarkBySlug[slug])}
+        alt=""
+        className="pointer-events-none absolute -right-10 bottom-0 hidden h-72 opacity-[0.06] lg:block"
+      />
+      <Container className="relative">
         <Link to="/services" className="text-xs font-semibold text-charcoal/50 hover:text-red-primary">
           ← {t.serviceDetail.backToServices}
         </Link>

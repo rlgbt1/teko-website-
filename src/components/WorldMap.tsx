@@ -2,7 +2,7 @@ import { useMemo, useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import DottedMap from 'dotted-map'
 
-export type MapPoint = { lat: number; lng: number; label: string }
+export type MapPoint = { lat: number; lng: number; label: string; labelBelow?: boolean }
 
 const map = new DottedMap({ height: 60, grid: 'diagonal' })
 
@@ -88,10 +88,10 @@ export function WorldMap({ points, hub }: { points: MapPoint[]; hub: MapPoint })
             <circle cx={p.xy.x} cy={p.xy.y} r={3.5} fill="#262b33" />
             <text
               x={p.xy.x}
-              y={p.xy.y - 10}
+              y={p.labelBelow ? p.xy.y + 15 : p.xy.y - 10}
               textAnchor="middle"
-              className="fill-charcoal/70"
-              style={{ fontSize: 9, fontFamily: 'Inter, sans-serif', fontWeight: 600 }}
+              className="fill-charcoal/80"
+              style={{ fontSize: 13, fontFamily: 'Inter, sans-serif', fontWeight: 700 }}
             >
               {p.label}
             </text>
@@ -103,7 +103,7 @@ export function WorldMap({ points, hub }: { points: MapPoint[]; hub: MapPoint })
           y={hubXY.y - 14}
           textAnchor="middle"
           className="fill-red-primary"
-          style={{ fontSize: 10, fontFamily: 'Inter, sans-serif', fontWeight: 700 }}
+          style={{ fontSize: 14, fontFamily: 'Inter, sans-serif', fontWeight: 800 }}
         >
           {hub.label}
         </text>

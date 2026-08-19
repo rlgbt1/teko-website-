@@ -28,27 +28,27 @@ export const translations = {
     },
     trust: {
       line: 'Working with collaborators internationally.',
-      line2: 'A global network of developers ready to ship digital solutions for your business.',
+      line2: 'A global network of developers and designers ready to ship digital solutions for your business.',
     },
     stats: {
-      title: 'Why This Matters',
+      title: 'Why Does This Matter?',
       subtitle: 'The businesses we work with usually recognize themselves in these numbers.',
       identity: {
         label: 'Digital identity & operations',
         items: [
-          { stat: '73%', desc: 'of consumers say a poor website makes them question if a business is credible or even legitimate.' },
-          { stat: '57%', desc: 'of small businesses still don’t have a website at all, invisible to anyone searching for them.' },
-          { stat: '88%', desc: 'of users are unlikely to return to a site after a bad first experience.' },
-          { stat: '3h+', desc: 'lost per week, per employee, re-typing data between disconnected spreadsheets, inboxes and drives.' },
+          { stat: '73%', desc: 'question a business’s credibility after a poor website.' },
+          { stat: '57%', desc: 'of small businesses are still invisible online.' },
+          { stat: '88%', desc: 'won’t return after a bad first experience.' },
+          { stat: '3h+', desc: 'lost weekly juggling disconnected tools.' },
         ],
       },
       analytics: {
         label: 'AI for business departments',
         items: [
-          { stat: '40%', desc: 'of a manager’s time is spent chasing, cleaning, and reformatting data instead of using it.' },
-          { stat: '2.5x', desc: 'more likely a company is to beat targets when leadership has real-time reporting instead of monthly spreadsheets.' },
-          { stat: '68%', desc: 'of businesses admit they make decisions on gut feeling because their data isn’t trustworthy or timely.' },
-          { stat: '1 in 3', desc: 'reports handed to leadership contain an error introduced by manual copy-paste work.' },
+          { stat: '40%', desc: 'of manager time spent cleaning data, not using it.' },
+          { stat: '2.5x', desc: 'more likely to beat targets with real-time data.' },
+          { stat: '68%', desc: 'of businesses decide on gut feeling, not data.' },
+          { stat: '1 in 3', desc: 'reports contain a copy-paste error.' },
         ],
       },
     },
@@ -66,7 +66,7 @@ export const translations = {
     },
     servicesTeaser: {
       kicker: 'What we do',
-      title: 'Two suites, one ideal route',
+      title: 'Two Suites, One Ideal Route',
       subtitle:
         'Walking both suites in order is the route we recommend: first we bring your presence to life, then we make it think. Each suite also stands on its own.',
       cta: 'Explore all services',
@@ -74,13 +74,13 @@ export const translations = {
         name: 'Digital Identity & Operations',
         tagline: 'We bring your presence to life',
         desc: 'Professional email, domain, a simple CRM, organized drives, and a website. The operational backbone, set up right, once.',
-        checklist: ['Professional email + domain', 'Simple CRM, sized to your team', 'Organized shared drives', 'A website built right'],
+        checklist: ['Website creation', 'Digital identity management', 'Social media management', 'Professional email on your own domain'],
       },
       branch2: {
         name: 'AI Solutions for Business Departments',
         tagline: 'We put AI to work inside your analytics, departments, and CRM',
         desc: 'We connect your data, automate the reporting, and put AI to work inside the tools your team already uses, every day.',
-        checklist: ['Executive reporting agent', 'AI workflow automation', 'AI inside your CRM and departments'],
+        checklist: ['Database solutions for businesses', 'Dashboards and reporting systems', 'Process and task automation', 'AI agents for operations'],
       },
     },
     route: {
@@ -103,14 +103,16 @@ export const translations = {
         flagshipDesc:
           'The operational backbone for a serious business: professional email + domain, organized shared drives, intake forms, a simple CRM, and a website, set up right, once.',
         note: 'Includes websites, like this one.',
-        addon: 'Add-on: WhatsApp inquiry flow and FAQ assistant.',
+        addon: '',
         checklist: [
+          'Website creation',
+          'Digital identity management',
+          'Social media management',
           'Professional email on your own domain',
-          'Organized, permission-based shared drives',
-          'Client intake forms that route to the right place',
-          'A simple CRM sized to how your team sells',
-          'A website that matches the rest of your identity',
-          'Optional: WhatsApp inquiry flow and FAQ assistant',
+          'WhatsApp for customer service and orders',
+          'Client and sales management system',
+          'Company document organization and management',
+          'AI agent for FAQs and online support',
         ],
       },
       step2: {
@@ -127,16 +129,17 @@ export const translations = {
         item3Desc:
           'AI embedded in your CRM and department tools: pipeline trackers, BD dashboards, and workflow systems fitted to how your business actually operates.',
         checklist: [
-          'Automated executive and board-ready reporting',
-          'AI-written commentary on your numbers, reviewed by your team',
-          'Recurring report pipelines that build themselves',
-          'AI-assisted pipeline and BD tracking inside your CRM',
-          'Department dashboards with automated KPI logic',
+          'Database solutions for businesses',
+          'Business data organization and management',
+          'Dashboards and reporting systems',
+          'Process and task automation',
+          'AI agents for operations',
+          'Integration between tools and systems',
         ],
         scrollLabel: 'A real system, in production',
-        scrollTitle: 'BDA × TekoAI — Market Intelligence Platform',
+        scrollTitle: 'Bank × TekoAI — Market Intelligence Platform',
         scrollDesc:
-          'An automated daily market report dashboard, built for a financial research desk. Live proof of the kind of system Teko ships, not a mockup.',
+          'An automated daily market report dashboard, built for a leading bank (name withheld for confidentiality). Live proof of the kind of system Teko ships, not a mockup.',
       },
     },
     serviceDetail: {
@@ -201,12 +204,12 @@ export const translations = {
       },
     },
     how: {
-      title: 'How We Work',
+      title: 'How Do We Work?',
       subtitle: 'A fixed, four-step process. No surprises, no scope creep.',
       steps: [
         { name: 'Discovery', tag: 'Free', desc: 'We map the bottleneck.' },
         { name: 'Build', tag: '', desc: 'Fixed scope, agreed upfront.' },
-        { name: 'Launch', tag: '', desc: 'Delivered: 50% on agreement, 50% on delivery (or installments for larger builds).' },
+        { name: 'Launch', tag: '50/50', desc: 'Delivered: 50% on agreement, 50% on delivery (or installments for larger builds).' },
         { name: 'Support', tag: '', desc: 'Ongoing monitoring and improvements.' },
       ],
     },
@@ -219,8 +222,8 @@ export const translations = {
         {
           slug: 'bda',
           tag: 'Demo project · Flagship',
-          name: 'BDA — Daily Market Report System',
-          summary: 'An automated financial market reporting system, Teko’s flagship proof of concept.',
+          name: 'Bank — Daily Market Report System',
+          summary: 'An automated financial market reporting system for a leading bank (name withheld for confidentiality), Teko’s flagship proof of concept.',
         },
         {
           slug: 'grupo-mestres',
@@ -240,16 +243,26 @@ export const translations = {
       title: 'About Teko',
       kicker: 'About / Team',
       intro:
-        'Teko was founded by two finance- and business-analytics-trained operators who believe growth comes from structure, not guesswork. We build the systems we wished more businesses had.',
+        'Teko was founded by two young professionals who believe growth comes from structure, not guesswork. We build the systems we wished more businesses had.',
       foundersTitle: 'Founders',
       foundersTagline: 'Two highly proactive young professionals, with experience and knowledge of the latest technology systems.',
       founder1: {
         name: 'Reinaldo Trindade',
-        bio: 'Finance and business analytics background (Bayes Business School); Angola-market experience via internships and non-profit work.',
+        degree: 'BSc Business Analytics with Finance @ Bayes Business School',
+        experience: [
+          'Hemera Capital Partners (investment advisory & brokerage firm)',
+          'Experience in data organisation, and business systems design',
+        ],
+        mantra: '“Discipline is the bridge between goals and accomplishment.”',
       },
       founder2: {
-        name: 'Malcolm',
-        bio: 'Add Malcolm’s background/credentials here.',
+        name: 'Malcolm Kapaia',
+        degree: 'BSc Finance & Management — Bayes Business School',
+        experience: [
+          'Experience across non-profit: Cercica, Banco Alimentar, Opaia Foundation',
+          'Internship at Banco BIG (investment banking exposure)',
+        ],
+        mantra: '“Become your best and do your best.”',
       },
     },
     contact: {
@@ -276,7 +289,7 @@ export const translations = {
       servicesTitle: 'Services',
       companyTitle: 'Company',
       socialTitle: 'Connect',
-      linkedinSoon: 'LinkedIn (soon)',
+      linkedinLabel: 'LinkedIn',
       rights: 'All rights reserved.',
     },
     backHome: 'Back to Teko',
@@ -308,27 +321,27 @@ export const translations = {
     },
     trust: {
       line: 'A trabalhar com colaboradores internacionalmente.',
-      line2: 'Uma rede global de programadores pronta para entregar soluções digitais para o seu negócio.',
+      line2: 'Uma rede global de programadores e designers pronta para entregar soluções digitais para o seu negócio.',
     },
     stats: {
-      title: 'Porque É Que Isto Importa',
+      title: 'Porque Que Isto Importa?',
       subtitle: 'As empresas com quem trabalhamos costumam rever-se nestes números.',
       identity: {
         label: 'Identidade digital & operações',
         items: [
-          { stat: '73%', desc: 'dos consumidores dizem que um site de má qualidade os faz duvidar da credibilidade, ou até legitimidade, de um negócio.' },
-          { stat: '57%', desc: 'das pequenas empresas continuam sem website, invisíveis para quem as procura online.' },
-          { stat: '88%', desc: 'dos utilizadores é improvável que voltem a um site depois de uma má primeira experiência.' },
-          { stat: '3h+', desc: 'perdidas por semana, por colaborador, a reintroduzir dados entre folhas de cálculo, emails e drives desligados entre si.' },
+          { stat: '73%', desc: 'duvidam da credibilidade após um mau website.' },
+          { stat: '57%', desc: 'continuam invisíveis online, sem website.' },
+          { stat: '88%', desc: 'não voltam após uma má primeira experiência.' },
+          { stat: '3h+', desc: 'perdidas por semana com ferramentas desligadas.' },
         ],
       },
       analytics: {
         label: 'IA para departamentos de negócio',
         items: [
-          { stat: '40%', desc: 'do tempo de um gestor é gasto a procurar, limpar e reformatar dados, em vez de os usar.' },
-          { stat: '2.5x', desc: 'mais provável uma empresa bater os seus objetivos quando a liderança tem relatórios em tempo real, em vez de folhas mensais.' },
-          { stat: '68%', desc: 'das empresas admitem decidir "por intuição" porque os seus dados não são fiáveis ou atempados.' },
-          { stat: '1 em 3', desc: 'relatórios entregues à liderança contêm um erro introduzido por trabalho manual de copiar-colar.' },
+          { stat: '40%', desc: 'do tempo gasto a limpar dados, não a usá-los.' },
+          { stat: '2.5x', desc: 'mais provável bater objetivos com dados em tempo real.' },
+          { stat: '68%', desc: 'decidem "por intuição", não por dados.' },
+          { stat: '1 em 3', desc: 'relatórios têm um erro de copiar-colar.' },
         ],
       },
     },
@@ -346,7 +359,7 @@ export const translations = {
     },
     servicesTeaser: {
       kicker: 'O que fazemos',
-      title: 'Dois pacotes, uma rota ideal',
+      title: 'Dois Pacotes, Uma Rota Ideal',
       subtitle:
         'Seguir os dois pacotes pela ordem é a rota que recomendamos: primeiro damos vida à sua presença, depois tornamo-la inteligente. Cada pacote também funciona sozinho.',
       cta: 'Ver todos os serviços',
@@ -354,13 +367,13 @@ export const translations = {
         name: 'Identidade Digital & Operações',
         tagline: 'Damos vida à sua presença',
         desc: 'Email profissional, domínio, um CRM simples, drives organizados, e o seu website. A espinha dorsal operacional, feita bem, uma vez.',
-        checklist: ['Email profissional + domínio', 'CRM simples, do tamanho da sua equipa', 'Drives partilhados organizados', 'Um website bem feito'],
+        checklist: ['Criação de website', 'Gestão da identidade digital', 'Gestão de redes sociais', 'Email profissional no seu próprio domínio'],
       },
       branch2: {
         name: 'Soluções de IA para Departamentos de Negócio',
         tagline: 'Colocamos a IA a trabalhar na sua análise, departamentos e CRM',
         desc: 'Ligamos os seus dados, automatizamos os relatórios, e colocamos a IA a trabalhar dentro das ferramentas que a sua equipa já usa, todos os dias.',
-        checklist: ['Agente de relatórios executivos', 'Automação de fluxos com IA', 'IA dentro do seu CRM e departamentos'],
+        checklist: ['Soluções de bases de dados para empresas', 'Dashboards e sistemas de reporting', 'Automação de processos e tarefas', 'Agentes de IA para operações'],
       },
     },
     route: {
@@ -383,14 +396,16 @@ export const translations = {
         flagshipDesc:
           'A espinha dorsal operacional de um negócio sério: email profissional + domínio, drives partilhados organizados, formulários de entrada, um CRM simples e um website, feito bem, uma vez.',
         note: 'Inclui websites, como este.',
-        addon: 'Extra: fluxo de contacto via WhatsApp e assistente de FAQ.',
+        addon: '',
         checklist: [
+          'Criação de website',
+          'Gestão da identidade digital',
+          'Gestão de redes sociais',
           'Email profissional no seu próprio domínio',
-          'Drives partilhados organizados, com permissões',
-          'Formulários de entrada que direcionam para o sítio certo',
-          'Um CRM simples, do tamanho da forma como a sua equipa vende',
-          'Um website coerente com o resto da sua identidade',
-          'Opcional: fluxo de contacto via WhatsApp e assistente de FAQ',
+          'WhatsApp para atendimento e pedidos',
+          'Sistema de gestão de clientes e vendas',
+          'Organização e gestão de documentos da empresa',
+          'Agente de IA para perguntas frequentes e atendimento online',
         ],
       },
       step2: {
@@ -407,16 +422,17 @@ export const translations = {
         item3Desc:
           'IA integrada no seu CRM e ferramentas de departamento: trackers de pipeline, dashboards de desenvolvimento de negócio, e sistemas de fluxo adaptados à forma como o seu negócio funciona.',
         checklist: [
-          'Relatórios executivos automáticos, prontos para a direção',
-          'Comentário gerado por IA sobre os números, revisto pela sua equipa',
-          'Relatórios recorrentes que se constroem sozinhos',
-          'Tracking de pipeline e BD assistido por IA dentro do seu CRM',
-          'Dashboards de departamento com lógica de KPIs automatizada',
+          'Soluções de bases de dados para empresas',
+          'Organização e gestão de dados empresariais',
+          'Dashboards e sistemas de reporting',
+          'Automação de processos e tarefas',
+          'Agentes de IA para operações',
+          'Integração entre ferramentas e sistemas',
         ],
         scrollLabel: 'Um sistema real, em produção',
-        scrollTitle: 'BDA × TekoAI — Plataforma de Inteligência de Mercado',
+        scrollTitle: 'Banco × TekoAI — Plataforma de Inteligência de Mercado',
         scrollDesc:
-          'Um dashboard automático de relatório diário de mercado, construído para uma mesa de research financeiro. Prova ao vivo do tipo de sistema que a Teko entrega, não é uma maquete.',
+          'Um dashboard automático de relatório diário de mercado, construído para um banco de referência (nome reservado por confidencialidade). Prova ao vivo do tipo de sistema que a Teko entrega, não é uma maquete.',
       },
     },
     serviceDetail: {
@@ -481,12 +497,12 @@ export const translations = {
       },
     },
     how: {
-      title: 'Como Trabalhamos',
+      title: 'Como Trabalhamos?',
       subtitle: 'Um processo fixo, em quatro passos. Sem surpresas, sem desvios de âmbito.',
       steps: [
         { name: 'Diagnóstico', tag: 'Gratuito', desc: 'Mapeamos o problema.' },
         { name: 'Construção', tag: '', desc: 'Âmbito fixo, definido antecipadamente.' },
-        { name: 'Lançamento', tag: '', desc: 'Entregue: 50% no acordo, 50% na entrega (ou prestações para projetos maiores).' },
+        { name: 'Lançamento', tag: '50/50', desc: 'Entregue: 50% no acordo, 50% na entrega (ou prestações para projetos maiores).' },
         { name: 'Suporte', tag: '', desc: 'Monitorização e melhorias contínuas.' },
       ],
     },
@@ -499,8 +515,8 @@ export const translations = {
         {
           slug: 'bda',
           tag: 'Projeto demo · Produto principal',
-          name: 'BDA — Sistema de Relatório Diário de Mercado',
-          summary: 'Um sistema automatizado de relatórios de mercado financeiro, a prova de conceito principal da Teko.',
+          name: 'Banco — Sistema de Relatório Diário de Mercado',
+          summary: 'Um sistema automatizado de relatórios de mercado financeiro para um banco de referência (nome reservado por confidencialidade), a prova de conceito principal da Teko.',
         },
         {
           slug: 'grupo-mestres',
@@ -520,16 +536,26 @@ export const translations = {
       title: 'Sobre a Teko',
       kicker: 'Sobre / Equipa',
       intro:
-        'A Teko foi fundada por dois profissionais formados em finanças e análise de negócio que acreditam que o crescimento vem da estrutura, não do acaso. Construímos os sistemas que gostaríamos que mais empresas tivessem.',
+        'A Teko foi fundada por dois jovens profissionais que acreditam que o crescimento vem da estrutura, não do acaso. Construímos os sistemas que gostaríamos que mais empresas tivessem.',
       foundersTitle: 'Fundadores',
       foundersTagline: 'Dois jovens altamente proactivos, com experiência e conhecimento nos sistemas tecnológicos mais atuais.',
       founder1: {
         name: 'Reinaldo Trindade',
-        bio: 'Formação em finanças e análise de negócio (Bayes Business School); experiência no mercado angolano via estágios e trabalho em ONGs.',
+        degree: 'Licenciatura em Business Analytics com Finanças, Bayes Business School',
+        experience: [
+          'Hemera Capital Partners (consultora de investimento e corretora)',
+          'Experiência em organização de dados e desenho de sistemas de negócio',
+        ],
+        mantra: '“Discipline is the bridge between goals and accomplishment.”',
       },
       founder2: {
-        name: 'Malcolm',
-        bio: 'Adicionar formação/credenciais do Malcolm aqui.',
+        name: 'Malcolm Kapaia',
+        degree: 'Licenciatura em Finanças e Gestão, Bayes Business School',
+        experience: [
+          'Experiência em organizações sem fins lucrativos: Cercica, Banco Alimentar, Opaia Foundation',
+          'Estágio no Banco BIG (exposição a banca de investimento)',
+        ],
+        mantra: '“Become your best and do your best.”',
       },
     },
     contact: {
@@ -556,7 +582,7 @@ export const translations = {
       servicesTitle: 'Serviços',
       companyTitle: 'Empresa',
       socialTitle: 'Ligar',
-      linkedinSoon: 'LinkedIn (em breve)',
+      linkedinLabel: 'LinkedIn',
       rights: 'Todos os direitos reservados.',
     },
     backHome: 'Voltar à Teko',
@@ -565,7 +591,8 @@ export const translations = {
 
 export type Translation = (typeof translations)['en']
 
-export const CONTACT_EMAIL = 'hello@teko.pt'
+export const CONTACT_EMAIL = 'tekoo.aip@gmail.com'
+export const LINKEDIN_URL = 'https://www.linkedin.com/company/teko-ai/'
 
 export const SERVICE_SLUGS = [
   'digital-operations-pack',

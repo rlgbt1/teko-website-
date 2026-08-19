@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
+import { Mail } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
-import { CONTACT_EMAIL, SERVICE_SLUGS } from '../i18n/translations'
+import { CONTACT_EMAIL, LINKEDIN_URL, SERVICE_SLUGS } from '../i18n/translations'
 import { assetUrl } from '../lib/assetUrl'
 import { Container } from './Container'
 import { LangToggle } from './LangToggle'
@@ -76,20 +77,25 @@ export function Footer() {
             </p>
             <ul className="mt-4 space-y-2.5">
               <li>
-                <a href={`mailto:${CONTACT_EMAIL}`} className="text-[13px] text-charcoal/70 hover:text-red-primary">
-                  {CONTACT_EMAIL}
+                <a
+                  href={`mailto:${CONTACT_EMAIL}`}
+                  className="inline-flex items-center gap-1.5 text-[13px] text-charcoal/70 hover:text-red-primary"
+                >
+                  <Mail className="h-3.5 w-3.5" /> {CONTACT_EMAIL}
                 </a>
               </li>
               <li>
-                <span
-                  className="inline-flex cursor-not-allowed items-center gap-1.5 text-[13px] text-charcoal/35"
-                  title={t.footer.linkedinSoon}
+                <a
+                  href={LINKEDIN_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-[13px] text-charcoal/70 hover:text-red-primary"
                 >
                   <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.86 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z" />
                   </svg>
-                  {t.footer.linkedinSoon}
-                </span>
+                  {t.footer.linkedinLabel}
+                </a>
               </li>
             </ul>
           </div>

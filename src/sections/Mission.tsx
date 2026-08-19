@@ -22,7 +22,14 @@ export function Mission() {
       />
       <Container className="relative">
         <div className="max-w-2xl">
-          <span className="font-display text-xs font-bold uppercase tracking-[0.14em] text-[#e8858f]">
+          <div className="flex h-11 w-11 items-center justify-center rounded-full bg-white/[0.08] ring-1 ring-white/15">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+              <circle cx="12" cy="12" r="9" stroke="#e8858f" strokeWidth="1.6" />
+              <circle cx="12" cy="12" r="5" stroke="#e8858f" strokeWidth="1.6" />
+              <circle cx="12" cy="12" r="1.6" fill="#e8858f" />
+            </svg>
+          </div>
+          <span className="mt-4 block font-display text-xs font-bold uppercase tracking-[0.14em] text-[#e8858f]">
             {t.mission.kicker}
           </span>
           <h2 className="mt-3 font-display text-2xl font-bold leading-tight text-white sm:text-4xl">

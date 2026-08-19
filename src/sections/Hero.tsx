@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { ArrowRight, Calendar } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container } from '../components/Container'
 import { Terminal } from '../components/Terminal'
@@ -46,15 +47,15 @@ export function Hero() {
           <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Link
               to="/contact"
-              className="inline-flex items-center justify-center rounded-full bg-red-primary px-6 py-3.5 text-sm font-semibold text-white shadow-[0_12px_30px_-8px_rgba(122,20,32,0.55)] transition-colors hover:bg-red-deep"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-red-primary px-6 py-3.5 text-sm font-semibold text-white shadow-[0_12px_30px_-8px_rgba(122,20,32,0.55)] transition-colors hover:bg-red-deep"
             >
-              {t.hero.cta}
+              <Calendar className="h-4 w-4" /> {t.hero.cta}
             </Link>
             <Link
               to="/services"
               className="inline-flex items-center justify-center gap-1.5 rounded-full border border-charcoal/15 px-6 py-3.5 text-sm font-semibold text-charcoal transition-colors hover:border-red-primary hover:text-red-primary"
             >
-              {t.hero.secondaryCta} <span aria-hidden>→</span>
+              {t.hero.secondaryCta} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
         </motion.div>

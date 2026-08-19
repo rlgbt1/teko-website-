@@ -14,8 +14,8 @@ export const caseStudyContent: Record<'en' | 'pt', Record<string, CaseStudyConte
     bda: {
       slug: 'bda',
       tag: 'Demo project · Flagship',
-      name: 'BDA — Daily Market Report System',
-      summary: 'An automated financial market reporting system — Teko’s flagship proof of concept.',
+      name: 'Bank — Daily Market Report System',
+      summary: 'An automated financial market reporting system for a leading bank (name withheld for confidentiality) — Teko’s flagship proof of concept.',
       challenge:
         'A financial research desk was compiling its daily market brief by hand — pulling numbers from several data feeds into spreadsheets, then writing commentary from scratch every morning before markets opened.',
       approach:
@@ -51,8 +51,8 @@ export const caseStudyContent: Record<'en' | 'pt', Record<string, CaseStudyConte
     bda: {
       slug: 'bda',
       tag: 'Projeto demo · Produto principal',
-      name: 'BDA — Sistema de Relatório Diário de Mercado',
-      summary: 'Um sistema automatizado de relatórios de mercado financeiro — a prova de conceito principal da Teko.',
+      name: 'Banco — Sistema de Relatório Diário de Mercado',
+      summary: 'Um sistema automatizado de relatórios de mercado financeiro para um banco de referência (nome reservado por confidencialidade) — a prova de conceito principal da Teko.',
       challenge:
         'Uma mesa de research financeiro compilava o seu briefing diário de mercado à mão — juntando números de várias fontes em folhas de cálculo e escrevendo comentário do zero todas as manhãs antes da abertura dos mercados.',
       approach:

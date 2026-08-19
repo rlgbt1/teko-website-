@@ -1,9 +1,11 @@
 import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { ArrowRight } from 'lucide-react'
 import { useLanguage } from '../i18n/LanguageContext'
 import { Container } from '../components/Container'
 import { IconBadge } from '../components/IconBadge'
 import { CheckList } from '../components/CheckList'
+import { assetUrl } from '../lib/assetUrl'
 
 export function ServicesTeaser() {
   const { t } = useLanguage()
@@ -14,8 +16,19 @@ export function ServicesTeaser() {
   ]
 
   return (
-    <section id="services" className="scroll-mt-24 py-20 sm:py-28">
-      <Container>
+    <section id="services" className="relative scroll-mt-24 overflow-hidden bg-cream py-20 sm:py-28">
+      <div
+        className="pointer-events-none absolute inset-y-0 left-0 w-1/2 opacity-[0.1]"
+        style={{
+          backgroundImage: `url(${assetUrl('assets/textures/network-graphic-dense.png')})`,
+          backgroundSize: '700px',
+          backgroundPosition: 'left center',
+          backgroundRepeat: 'no-repeat',
+          maskImage: 'linear-gradient(to right, black, transparent 80%)',
+          WebkitMaskImage: 'linear-gradient(to right, black, transparent 80%)',
+        }}
+      />
+      <Container className="relative">
         <div className="mx-auto max-w-2xl text-center">
           <span className="font-display text-xs font-bold uppercase tracking-[0.14em] text-red-primary">
             {t.servicesTeaser.kicker}
@@ -55,7 +68,7 @@ export function ServicesTeaser() {
             to="/services"
             className="inline-flex items-center gap-2 rounded-full bg-charcoal px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-red-primary"
           >
-            {t.servicesTeaser.cta} <span>→</span>
+            {t.servicesTeaser.cta} <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </Container>
