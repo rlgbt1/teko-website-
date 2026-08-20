@@ -9,8 +9,17 @@ export function CaseStudies({ compact = false, showViewAll = false }: { compact?
   const { t } = useLanguage()
 
   return (
-    <section id="cases" className="scroll-mt-24 py-20 sm:py-28">
-      <Container>
+    <section id="cases" className="relative scroll-mt-24 overflow-hidden py-20 sm:py-28">
+      <div
+        className="pointer-events-none absolute inset-0 opacity-[0.06]"
+        style={{
+          backgroundImage: `url(${assetUrl('assets/textures/network-graphic-dense.png')})`,
+          backgroundSize: '900px',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+      <Container className="relative">
         {!compact && (
           <div className="mx-auto max-w-xl text-center">
             <span className="font-display text-xs font-bold uppercase tracking-[0.14em] text-red-primary">

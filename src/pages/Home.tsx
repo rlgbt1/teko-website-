@@ -6,7 +6,6 @@ import { ServicesTeaser } from '../sections/ServicesTeaser'
 import { HowWeWork } from '../sections/HowWeWork'
 import { CaseStudies } from '../sections/CaseStudies'
 import { Contact } from '../sections/Contact'
-import { CircuitDivider } from '../components/CircuitDivider'
 
 export function Home() {
   useEffect(() => {
@@ -18,11 +17,9 @@ export function Home() {
       <Hero />
       <TrustStrip />
       <Stats />
-      <CircuitDivider />
       <ServicesTeaser />
       <HowWeWork />
       <CaseStudies showViewAll />
-      <CircuitDivider />
       <Contact />
     </>
   )

@@ -8,6 +8,8 @@ import { IconBadge } from '../components/IconBadge'
 import { CheckList } from '../components/CheckList'
 import { ContainerScrollAnimation } from '../components/ContainerScrollAnimation'
 import { DashboardMockup } from '../components/DashboardMockup'
+import { PackagesOverview } from '../sections/PackagesOverview'
+import { OperationalIdentity } from '../sections/OperationalIdentity'
 import { assetUrl } from '../lib/assetUrl'
 
 export function Services() {
@@ -27,6 +29,17 @@ export function Services() {
             backgroundSize: '340px',
             maskImage: 'linear-gradient(to bottom, black, transparent 85%)',
             WebkitMaskImage: 'linear-gradient(to bottom, black, transparent 85%)',
+          }}
+        />
+        <div
+          className="pointer-events-none absolute inset-y-0 right-0 hidden w-1/2 opacity-[0.14] lg:block"
+          style={{
+            backgroundImage: `url(${assetUrl('assets/textures/network-graphic-dense.png')})`,
+            backgroundSize: '760px',
+            backgroundPosition: 'right center',
+            backgroundRepeat: 'no-repeat',
+            maskImage: 'linear-gradient(to left, black, transparent 80%)',
+            WebkitMaskImage: 'linear-gradient(to left, black, transparent 80%)',
           }}
         />
         <Container className="relative text-center">
@@ -81,6 +94,8 @@ export function Services() {
           />
         </Container>
       </section>
+
+      <PackagesOverview />
 
       <div className="flex justify-center">
         <div className="h-12 w-px bg-gray-line" />
@@ -138,6 +153,8 @@ export function Services() {
           </ContainerScrollAnimation>
         </Container>
       </section>
+
+      <OperationalIdentity />
 
       <section className="pb-20 sm:pb-28">
         <Container>
@@ -201,8 +218,8 @@ function SuiteBlock({
       </div>
       <h2 className="mt-3 font-display text-2xl font-bold text-charcoal sm:text-3xl">{tagline}</h2>
 
-      <div className="mt-8 grid gap-8 rounded-3xl border border-gray-line bg-white p-6 shadow-[0_10px_28px_-18px_rgba(38,43,51,0.3)] sm:p-8 lg:grid-cols-[auto_1fr] lg:items-start lg:gap-10">
-        <IconBadge src={iconSrc} size="lg" />
+      <div className="mt-8 grid grid-cols-[auto_1fr] items-start gap-5 rounded-3xl border border-gray-line bg-white p-6 shadow-[0_10px_28px_-18px_rgba(38,43,51,0.3)] sm:p-8 lg:gap-10">
+        <IconBadge src={iconSrc} size="md" />
         <div>
           <div className="inline-flex items-center gap-2">
             <span className="rounded-full bg-red-primary/10 px-2.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-red-primary">

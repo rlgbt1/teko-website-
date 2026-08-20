@@ -14,7 +14,8 @@ export function AboutPage() {
 
   return (
     <div>
-      <section className="relative overflow-hidden pt-32 pb-16 sm:pt-40 sm:pb-20">
+      {/* Header + PNG graphic + Founders, all in one section */}
+      <section className="relative overflow-hidden pt-32 pb-20 sm:pt-40 sm:pb-28">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.4]"
           style={{
@@ -29,46 +30,23 @@ export function AboutPage() {
           alt=""
           className="pointer-events-none absolute -top-6 -right-10 hidden h-80 opacity-[0.1] lg:block"
         />
+        <img
+          src={assetUrl('assets/icons/building-growth.png')}
+          alt=""
+          className="pointer-events-none absolute top-1/2 -right-6 h-56 -translate-y-1/2 opacity-[0.14] sm:h-80 lg:-right-10 lg:h-[26rem]"
+        />
         <Container className="relative">
-          <div className="mx-auto max-w-2xl text-center">
-            <span className="font-display text-xs font-bold uppercase tracking-[0.14em] text-red-primary">
-              {t.about.kicker}
-            </span>
-            <h1 className="mt-3 font-display text-3xl font-bold text-charcoal sm:text-4xl">
-              {t.about.title}
-            </h1>
-            <p className="mt-5 text-[15px] leading-relaxed text-charcoal/70 sm:text-base">
-              {t.about.intro}
-            </p>
-          </div>
+          <span className="block text-center font-display text-xs font-bold uppercase tracking-[0.14em] text-red-primary">
+            {t.about.kicker}
+          </span>
 
           <img
             src={assetUrl('assets/icons/silhouettes-network.png')}
             alt=""
-            className="relative mx-auto mt-10 h-28 sm:h-36"
+            className="relative mx-auto mt-6 h-28 sm:h-36"
           />
-        </Container>
-      </section>
 
-      <Mission />
-
-      <section className="relative overflow-hidden bg-cream py-20 sm:py-28">
-        <div
-          className="pointer-events-none absolute inset-0 opacity-[0.35]"
-          style={{
-            backgroundImage: `url(${assetUrl('assets/textures/circuit-tile.png')})`,
-            backgroundSize: '340px',
-            maskImage: 'radial-gradient(ellipse at center, black, transparent 75%)',
-            WebkitMaskImage: 'radial-gradient(ellipse at center, black, transparent 75%)',
-          }}
-        />
-        <img
-          src={assetUrl('assets/icons/building-growth.png')}
-          alt=""
-          className="pointer-events-none absolute bottom-0 left-4 hidden h-64 opacity-[0.08] lg:block"
-        />
-        <Container className="relative">
-          <h2 className="text-center font-display text-2xl font-bold text-charcoal sm:text-3xl">
+          <h2 className="mt-14 text-center font-display text-2xl font-bold text-charcoal sm:mt-16 sm:text-3xl">
             {t.about.foundersTitle}
           </h2>
           <p className="mx-auto mt-3 max-w-md text-center text-sm text-charcoal/60 sm:text-base">
@@ -94,6 +72,20 @@ export function AboutPage() {
           </div>
         </Container>
       </section>
+
+      {/* "Sobre a Teko" heading + intro paragraph, stacked directly */}
+      <section className="bg-cream py-16 sm:py-20">
+        <Container>
+          <h1 className="text-center font-display text-3xl font-bold text-charcoal sm:text-4xl">
+            {t.about.title}
+          </h1>
+          <p className="mx-auto mt-5 max-w-2xl text-center text-[15px] leading-relaxed text-charcoal/70 sm:text-base">
+            {t.about.intro}
+          </p>
+        </Container>
+      </section>
+
+      <Mission />
     </div>
   )
 }

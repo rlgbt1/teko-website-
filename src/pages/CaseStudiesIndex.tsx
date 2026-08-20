@@ -13,7 +13,7 @@ export function CaseStudiesIndex() {
 
   return (
     <div>
-      <section className="relative overflow-hidden pt-32 pb-6 sm:pt-40">
+      <section className="relative overflow-hidden pt-32 pb-10 sm:pt-40">
         <div
           className="pointer-events-none absolute inset-0 opacity-[0.4]"
           style={{
@@ -30,6 +30,17 @@ export function CaseStudiesIndex() {
           <h1 className="mx-auto mt-3 max-w-xl font-display text-3xl font-bold text-charcoal sm:text-4xl">
             {t.cases.subtitle}
           </h1>
+
+          <div className="mx-auto mt-10 max-w-2xl overflow-hidden rounded-3xl border border-gray-line bg-charcoal shadow-[0_20px_45px_-20px_rgba(38,43,51,0.35)]">
+            <img
+              src={assetUrl('assets/icons/tangled-to-structured.png')}
+              alt={t.cases.bannerCaption}
+              className="w-full"
+            />
+            <p className="border-t border-white/10 bg-charcoal py-3 text-sm font-medium text-white/70">
+              {t.cases.bannerCaption}
+            </p>
+          </div>
         </Container>
       </section>
       <CaseStudies compact />
